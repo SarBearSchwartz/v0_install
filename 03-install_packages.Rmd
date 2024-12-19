@@ -31,20 +31,20 @@ A repository is a place where packages are located so you can install them from 
 
 
 ```{r, echo=FALSE}
-tribble( ~image_logo, ~description,
-         "![](images/cran_logo.png)",
-         "**[$CRAN$:](https://cran.r-project.org/)** the official repository, it is a network of $ftp$ and web servers mantained by the $R$ community around the world. It is coordinated by the $R$ foundation, and for a package to be published here it needs to pass several tests  [here](https://cran.r-project.org/web/packages/policies.html).",
-         "![](images/GitHub_logo.png)",
-         "**[$GitHub$:](https://github.com/)** although this is not $R$ specific, $GitHub$ is probably the most popular repository for open source projects. Its popularity comes from the unlimited space for open source, the integration with $git$, a version control software, and its ease to share and collaborate with others. But be aware that there is no review process associated to it.  (All the files for this eBook are stored on $GitHub$.)",
-         "![](images/bioconductor_logo.png)",
-         "**[Bioconductor:](https://www.bioconductor.org/)** this is a topic specific repository, intended for open source software for bioinformatics. As $CRAN$, it has its own [submission and review processes](https://www.bioconductor.org/developers/package-submission/), and its community is very active having several conferences and meetings per year.") %>% 
+tibble::tribble( ~image_logo, ~description,
+                 "![](images/CRAN_logo.png)",
+                 "**[$CRAN$:](https://cran.r-project.org/)** the official repository, it is a network of $ftp$ and web servers mantained by the $R$ community around the world. It is coordinated by the $R$ foundation, and for a package to be published here it needs to pass several tests  [here](https://cran.r-project.org/web/packages/policies.html).",
+                 "![](images/GitHub_logo.png)",
+                 "**[$GitHub$:](https://github.com/)** although this is not $R$ specific, $GitHub$ is probably the most popular repository for open source projects. Its popularity comes from the unlimited space for open source, the integration with $git$, a version control software, and its ease to share and collaborate with others. But be aware that there is no review process associated to it.  (All the files for this eBook are stored on $GitHub$.)",
+                 "![](images/bioconductor_logo.png)",
+                 "**[Bioconductor:](https://www.bioconductor.org/)** this is a topic specific repository, intended for open source software for bioinformatics. As $CRAN$, it has its own [submission and review processes](https://www.bioconductor.org/developers/package-submission/), and its community is very active having several conferences and meetings per year.") %>% 
   kableExtra::kable(col.names = c("", "Repository"),
                     align = "l")
 ```
 
 
 
-## Installing packages
+## Installing packages {#installRpkgs}
 
 Installing is the act of getting the package files onto your computer and stored in a location on your hard drive where $R$ can find them.  Usually the files are zipped/compress and must be extracted/unpacked. The directions below will walk you through the automated process of using the user interface in $R Studio$ *(rather than actual syntax)*.
 
@@ -54,7 +54,7 @@ In **R Studio**:
 
 1. Click on the **Packages** tab in the panel with the most tabs
 2. Click on the word **Install** just under and to the left of the tab
-3. In the box labelled **"Packages"**, type the name of the package you would like to download.  You can do several at once, just seperate them with at least one space or a comma.
+3. In the box labelled **"Packages"**, type the name of the package you would like to download.  You can do several at once, just separate them with at least one space or a comma.
 
 ```{block type='rmdlightbulb', echo=TRUE}
 **You only need to INSTALL packages ONCE per computer.**    
@@ -72,12 +72,12 @@ Leave the installation *"library path"* as the default. Also, make sure the box 
 ```{block type='rmdimportant', echo=TRUE}
 **Useful Package List** 
 
-tidyverse, furniture, pander, stargazer, texreg, xtable, kableExtra, RColorBrewer, gghighlight, ggthemes, ggfortify, ggalt, ggExtra, GGally, ggeffects, corrplot, gpairs, gridextra, likert, vcd, scales, cowplot, yarrr, psych, polycor, corpcor, sjlabelled, sjPlot, sjmisc, sjstats, Hmisc, labelled, afex, emmeans, corpcor, multicomp, multcompView, car, effects, predictmean, nlme, lme4, lmerTest, HLMdiag, geepack, gee, gee4, optimx, MuMIn, lavaan, OpenMx, sem, semPlot, randomForest, randomForestSRC, ggRandomForests, party, partykit, mgcv, glmnet, survival, caret, bookdown, blogdown, tidytex, xaringan, REDCapR, redcapAPI, devtools, testthat, roxygen2, eRm, ltm, lsr, heplots, magrittr, hexbin, leaps, mlmRev, MuMIn, ISwR, VIM, effects, usethis, tinytex
+tidyverse, furniture, pander, stargazer, texreg, xtable, kableExtra, RColorBrewer, gghighlight, ggthemes, ggfortify, ggalt, ggExtra, GGally, ggeffects, corrplot, gpairs, gridextra, likert, vcd, scales, cowplot, yarrr, psych, polycor, corpcor, sjlabelled, sjPlot, sjmisc, sjstats, Hmisc, labelled, afex, emmeans, corpcor, multicomp, multcompView, car, effects, predictmean, nlme, lme4, lmerTest, HLMdiag, geepack, gee, gee4, optimx, MuMIn, lavaan, OpenMx, sem, semPlot, randomForest, randomForestSRC, ggRandomForests, party, partykit, mgcv, glmnet, survival, caret, bookdown, blogdown, tidytex, xaringan, REDCapR, redcapAPI, devtools, testthat, roxygen2, eRm, ltm, lsr, heplots, magrittr, hexbin, leaps, mlmRev, MuMIn, ISwR, VIM, effects, usethis, tinytex, flextable, naniar
 ```
 
 
 
-When you click the **Install** buttom, a smaller window *may* asks if you would like to "re-start $R$ prior to installing", choose "no" and manually close and open the $R Studio$ program once all packages have been downloaded, unpacked, and checked *(saves time)*.  This may take a few minutes, especially if you have selected multiple packages.  
+When you click the **Install** button, a smaller window *may* asks if you would like to "re-start $R$ prior to installing", choose "no" and manually close and open the $R Studio$ program once all packages have been downloaded, unpacked, and checked *(saves time)*.  This may take a few minutes, especially if you have selected multiple packages.  
 
 
 ## Useful Packages on CRAN
@@ -155,6 +155,7 @@ package_list_tables <-  c("furniture",
 | website     | description |   
 |------------:|:------------|   
 | [`furniture`](http://tysonbarrett.com/furniture/)  | Tables for Quantitative Scientists |
+| [`flextable`](https://davidgohel.github.io/flextable/) | 	Functions for Tabular Reporting | 
 | [`pander`](https://rapporter.github.io/pander/)    | An R 'Pandoc' Writer (makes tables look nice) |
 | [`stargazer`](https://www.jakeruss.com/cheatsheets/stargazer/) | Well-Formatted Regression and Summary Statistics Tables |
 | [`texreg`](https://diffuseprior.wordpress.com/2013/01/20/texreg-a-package-for-beautiful-and-easily-customizable-latex-regression-tables-from-r/)    | Conversion of R Regression Output to LaTeX or HTML Tables |
@@ -172,6 +173,10 @@ package_list_visual <- c("RColorBrewer",
                          "ggfortify",
                          "ggalt",
                          "ggExtra",
+                         "ggpubr",
+                         "ggsignif",
+                         "ggstats",
+                         "ggtext",
                          "GGally", 
                          "ggeffects", 
                          "corrplot",
@@ -181,7 +186,8 @@ package_list_visual <- c("RColorBrewer",
                          "vcd",
                          "scales",
                          "cowplot",
-                         "yarrr")
+                         "yarrr",
+                         "patchwork")
 ```
 
 
@@ -194,6 +200,11 @@ package_list_visual <- c("RColorBrewer",
 | [`ggfortify`](https://github.com/sinhrks/ggfortify) | Data Visualization Tools for Statistical Analysis Results |
 | [`ggalt`](https://github.com/hrbrmstr/ggalt) | Lots of extras for `ggplot2` |
 | [`GGally`](https://ggobi.github.io/ggally/#canonical_correlation_analysis) | Extension to `ggplot2` |
+| [`ggeffects`](https://strengejacke.github.io/ggeffects/) | Create Tidy Data Frames of Marginal Effects for 'ggplot' from Model Outputs |
+| [`ggpubr`](https://rpkgs.datanovia.com/ggpubr/) | 'ggplot2' Based Publication Ready Plots |
+| [`ggsignif`](https://const-ae.github.io/ggsignif/) | Significance Brackets for 'ggplot2'  |
+| [`ggstats`](https://larmarange.github.io/ggstats/) | Extension to 'ggplot2' for Plotting Stats |
+| [`ggtext`](https://wilkelab.org/ggtext/) | Improved Text Rendering Support for 'ggplot2' |
 | [`corrplot`](https://rstudio-pubs-static.s3.amazonaws.com/240657_5157ff98e8204c358b2118fa69162e18.html) | Visualization of a Correlation Matrix |
 | `gpairs` | The Generalized Pairs Plot  |
 | [`gridextra`](https://cran.r-project.org/web/packages/egg/vignettes/Ecosystem.html) | Miscellaneous Functions for "Grid" Graphics |
@@ -202,6 +213,7 @@ package_list_visual <- c("RColorBrewer",
 | [`scales`](https://github.com/r-lib/scales) | Scale Functions for Visualization |
 | [`cowplot`](https://cran.r-project.org/web/packages/cowplot/vignettes/introduction.html) | Streamlined Plot Theme & Annotations for `ggplot2` |
 | [`yarrr`](https://ndphillips.github.io/piratesguide.html) | The Pirate's Guide to $R$ |
+| [`patchwork`](https://patchwork.data-imaginist.com/) | The Composer of Plots  |
 
 
 
@@ -435,6 +447,15 @@ install.packages("devtools")
 ```
 
 
+### Packages writen by Sarah Schwartz
+
+```{r, eval=FALSE}
+devtools::install_github("sarbearschwartz/apaSupp")
+devtools::install_github("sarbearschwartz/texreghelpr")
+```
+
+
+
 
 ### Templates for writing tutorials, practicals or examination papers with $R Markdown$
 
@@ -454,51 +475,16 @@ In addition, you will be able to:
 
 * Create examination papers with 
 
-    + multiple choice questions
-    + a candidate identification form
-    + dotted lines placeholders to fill in answers
-    
++ multiple choice questions
++ a candidate identification form
++ dotted lines placeholders to fill in answers
+
 * Create a new $R Markdown$ file with solution chunks replaced by empty ones.
 
 ```{block type='rmdlink', echo=TRUE}
 Website: [GitHub - `unilur`](https://github.com/koncina/unilur)     
 Tutorial: [blog post - `unilur`](http://eric.koncina.eu/posts/introducing-the-unilur-rmarkdown-template/)
 ```
-
-
-```{r, eval=FALSE}
-devtools::install_github("koncina/unilur")
-```
-
-
-
-
-
-### Prepare APA journal articles with $R Markdown$
-
-
-
-`papaja` is a $R$ package in the making including a $R Markdown$ template that can be used with (or without) **$R$ Studio** to produce documents, which conform to the **American Psychological Association (APA)** manuscript guidelines (6th Edition). The package uses the $LaTeX$ document class `apa6` and a .docx-reference file, so you can create PDF documents, or Word documents if you have to. Moreover, papaja supplies $R$ functions that facilitate reporting results of your analyses in accordance with APA guidelines.
-
-`papaja` has not yet been submitted to $CRAN$ because it is under active development. Currently, there are still a couple of loose ends they would like to tie up before we release the package to a larger audience.  There are two versions you can install from the $GitHub$ website.
-
-
-```{block type='rmdlink', echo=TRUE}
-Website: [GitHub - `papaja`](https://github.com/crsh/papaja)    
-Tutorial: [eBook - `papaja`](https://crsh.github.io/papaja_man/)
-```
-
-
-```{r, eval=FALSE}
-# Install the stable development verions from GitHub
-devtools::install_github("crsh/papaja")
-
-# Install the latest development snapshot from GitHub
-devtools::install_github("crsh/papaja@devel")
-```
-
-
-
 
 
 

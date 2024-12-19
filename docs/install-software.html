@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 Install Software | Encyclopedia of Quantitative Methods in R, vol. 0: Setting up Your Computer</title>
   <meta name="description" content="Getting started with R and R Studio: installing software and package management." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 Install Software | Encyclopedia of Quantitative Methods in R, vol. 0: Setting up Your Computer" />
   <meta property="og:type" content="book" />
@@ -55,7 +55,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -65,7 +65,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -119,10 +119,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 <style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -182,9 +187,7 @@ div.csl-indent {
 <li class="chapter" data-level="2.2" data-path="install-software.html"><a href="install-software.html#the-r-studio-ide"><i class="fa fa-check"></i><b>2.2</b> The R Studio IDE</a></li>
 <li class="chapter" data-level="2.3" data-path="install-software.html"><a href="install-software.html#tex"><i class="fa fa-check"></i><b>2.3</b> TeX</a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="install-software.html"><a href="install-software.html#new-option-the-tinytex-package"><i class="fa fa-check"></i><b>2.3.1</b> New Option: the <code>tinytex</code> package</a></li>
-<li class="chapter" data-level="2.3.2" data-path="install-software.html"><a href="install-software.html#mac---use-mactex-no-longer-needed"><i class="fa fa-check"></i><b>2.3.2</b> Mac - use <code>MacTeX</code> (no longer needed!)</a></li>
-<li class="chapter" data-level="2.3.3" data-path="install-software.html"><a href="install-software.html#windows---use-miktex-no-longer-needed"><i class="fa fa-check"></i><b>2.3.3</b> Windows - use <code>MikTeX</code> (no longer needed!)</a></li>
+<li class="chapter" data-level="2.3.1" data-path="install-software.html"><a href="install-software.html#the-tinytex-package"><i class="fa fa-check"></i><b>2.3.1</b> The <code>tinytex</code> package</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="install-packages.html"><a href="install-packages.html"><i class="fa fa-check"></i><b>3</b> Install Packages</a>
@@ -194,7 +197,7 @@ div.csl-indent {
 <li class="chapter" data-level="3.1.1" data-path="install-packages.html"><a href="install-packages.html#what-are-packages"><i class="fa fa-check"></i><b>3.1.1</b> What are packages ?</a></li>
 <li class="chapter" data-level="3.1.2" data-path="install-packages.html"><a href="install-packages.html#where-can-you-get-packages"><i class="fa fa-check"></i><b>3.1.2</b> Where can you get packages ?</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="install-packages.html"><a href="install-packages.html#installing-packages"><i class="fa fa-check"></i><b>3.2</b> Installing packages</a></li>
+<li class="chapter" data-level="3.2" data-path="install-packages.html"><a href="install-packages.html#installRpkgs"><i class="fa fa-check"></i><b>3.2</b> Installing packages</a></li>
 <li class="chapter" data-level="3.3" data-path="install-packages.html"><a href="install-packages.html#useful-packages-on-cran"><i class="fa fa-check"></i><b>3.3</b> Useful Packages on CRAN</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="install-packages.html"><a href="install-packages.html#the-tidy-universe-a-meta-package-from-r-studio"><i class="fa fa-check"></i><b>3.3.1</b> The Tidy-Universe, a META package from <span class="math inline">\(R Studio\)</span></a></li>
@@ -202,8 +205,8 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="install-packages.html"><a href="install-packages.html#userful-packages-on-github"><i class="fa fa-check"></i><b>3.4</b> Userful Packages on <span class="math inline">\(GitHub\)</span></a>
 <ul>
-<li class="chapter" data-level="3.4.1" data-path="install-packages.html"><a href="install-packages.html#templates-for-writing-tutorials-practicals-or-examination-papers-with-r-markdown"><i class="fa fa-check"></i><b>3.4.1</b> Templates for writing tutorials, practicals or examination papers with <span class="math inline">\(R Markdown\)</span></a></li>
-<li class="chapter" data-level="3.4.2" data-path="install-packages.html"><a href="install-packages.html#prepare-apa-journal-articles-with-r-markdown"><i class="fa fa-check"></i><b>3.4.2</b> Prepare APA journal articles with <span class="math inline">\(R Markdown\)</span></a></li>
+<li class="chapter" data-level="3.4.1" data-path="install-packages.html"><a href="install-packages.html#packages-writen-by-sarah-schwartz"><i class="fa fa-check"></i><b>3.4.1</b> Packages writen by Sarah Schwartz</a></li>
+<li class="chapter" data-level="3.4.2" data-path="install-packages.html"><a href="install-packages.html#templates-for-writing-tutorials-practicals-or-examination-papers-with-r-markdown"><i class="fa fa-check"></i><b>3.4.2</b> Templates for writing tutorials, practicals or examination papers with <span class="math inline">\(R Markdown\)</span></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="workspace-orientation.html"><a href="workspace-orientation.html"><i class="fa fa-check"></i><b>4</b> Workspace Orientation</a>
@@ -282,6 +285,7 @@ You will need to install both <span class="math inline">\(R\)</span> and <span c
 <blockquote>
 <p>The <strong>“Comprehensive R Archive Network” (CRAN)</strong> is a collection of sites which carry identical material, consisting of the <span class="math inline">\(R\)</span> distribution(s), the contributed extensions (packages), and documentation for <span class="math inline">\(R\)</span>. From <span class="math inline">\(CRAN\)</span>, you can obtain the latest official FREE release of BASE <span class="math inline">\(R\)</span>.</p>
 </blockquote>
+<p>Note: <strong>R</strong> version 4.4.2 <em>(Pile of Leaves)</em> was released on 2024-10-31 but the screen shots below may show an older version</p>
 <div class="rmddownload">
 <p>
 Go to: <a href="http://www.r-project.org">www.r-project.org</a>
@@ -295,7 +299,7 @@ Select <strong>base</strong> <span class="math inline"><span class="math inline"
 for your computer <em>(Windows, Mac, ect.)</em><br />
 </li>
 <li>
-Once it is downloaded, run the instalation.<br />
+Once it is downloaded, run the installation.<br />
 </li>
 <li>
 The defaults are good…don’t change them…just keep clicking
@@ -332,16 +336,19 @@ post</a>
 </blockquote>
 <div class="rmddownload">
 <p>
-Go to: <a href="http://www.posit.co">www.posit.co</a>
+Go to: <a
+href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a>
 </p>
 <ul>
 <li>
-Click the blue “DOWNLOAD RSTUDIO” buttom in the upper-right hand
-corner
+Step 1: skip (we installed R above)
 </li>
 <li>
-Select the FREE Open Source <strong>Desktop</strong> Edition of
-<span class="math inline"><span class="math inline">\(R Studio\)</span></span>
+Step 2: click the blue “DOWNLOAD RSTUDIO DESKTOP” button to download
+the installation file
+</li>
+<li>
+Execute the downloaded file (double click on windows)
 </li>
 <li>
 The defaults are good…don’t change them…just keep clicking
@@ -349,8 +356,7 @@ The defaults are good…don’t change them…just keep clicking
 </li>
 </ul>
 </div>
-<p><img src="images/RStudio_download.PNG" width="800" /></p>
-<p><img src="images/RStudio_version.PNG" width="400" /></p>
+<p><img src="images/Screenshot_rstudio_install_button_2025.png" width="800" /></p>
 <div class="rmdlink">
 <p>
 <span class="math inline"><span class="math inline">\(Posit\)</span></span> has an entire <a
@@ -362,7 +368,8 @@ statistics.
 <div class="rmdlightbulb">
 <p>
 <strong>Note:</strong> The <a
-href="https://www.r-consortium.org/"><span class="math inline"><span class="math inline">\(R Consortium\)</span></span></a> is a collaboration between the <span class="math inline"><span class="math inline">\(R\)</span></span> Foundation, <span class="math inline"><span class="math inline">\(RStudio\)</span></span>, <span class="math inline"><span class="math inline">\(Microsoft\)</span></span>, <span class="math inline"><span class="math inline">\(TIBCO\)</span></span>, <span class="math inline"><span class="math inline">\(Google\)</span></span>, <span class="math inline"><span class="math inline">\(Oracle\)</span></span>, <span class="math inline"><span class="math inline">\(HP\)</span></span> and others. It’s chartered to fund and
+href="https://www.r-consortium.org/"><span class="math inline"><span class="math inline">\(R
+Consortium\)</span></span></a> is a collaboration between the <span class="math inline"><span class="math inline">\(R\)</span></span> Foundation, <span class="math inline"><span class="math inline">\(RStudio\)</span></span>, <span class="math inline"><span class="math inline">\(Microsoft\)</span></span>, <span class="math inline"><span class="math inline">\(TIBCO\)</span></span>, <span class="math inline"><span class="math inline">\(Google\)</span></span>, <span class="math inline"><span class="math inline">\(Oracle\)</span></span>, <span class="math inline"><span class="math inline">\(HP\)</span></span> and others. It’s chartered to fund and
 inspire ideas that will enable <span class="math inline"><span class="math inline">\(R\)</span></span> to
 become an even better platform for science, research, and industry.
 </p>
@@ -374,68 +381,11 @@ become an even better platform for science, research, and industry.
 <blockquote>
 <p><span class="math inline">\(\TeX\)</span> or <span class="math inline">\(\LaTeX\)</span> is a typesetting or formatting system that is commonly used in printing and publishing, especially anything with formulas (see <a href="https://texfaq.org/FAQ-whatTeX" class="uri">https://texfaq.org/FAQ-whatTeX</a>). It is NOT NEEDED to run <span class="math inline">\(R\)</span>, but <span class="math inline">\(R Studio\)</span> must have access to it in order to <code>knit</code> a <span class="math inline">\(R Notebook\)</span> into a <code>.pdf</code> file. There are many versions, but the following are the ones that work best with <span class="math inline">\(R\)</span>, depending on your computer’s platform.</p>
 </blockquote>
-<div id="new-option-the-tinytex-package" class="section level3 hasAnchor" number="2.3.1">
-<h3><span class="header-section-number">2.3.1</span> New Option: the <code>tinytex</code> package<a href="install-software.html#new-option-the-tinytex-package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><code>tinyteX</code> is still a relatively new project which strives to offer all the functionality of <span class="math inline">\(\LaTeX\)</span>, but remain lightweight and easier to maintain.</p>
-<div class="rmdlink">
-<p>
-I am now using this in place of LaTeX!
-</p>
-</div>
-</div>
-<div id="mac---use-mactex-no-longer-needed" class="section level3 hasAnchor" number="2.3.2">
-<h3><span class="header-section-number">2.3.2</span> Mac - use <code>MacTeX</code> (no longer needed!)<a href="install-software.html#mac---use-mactex-no-longer-needed" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="rmddownload">
-<p>
-Go to: <a
-href="http://tug.org/mactex/">http://tug.org/mactex/</a>
-</p>
-<ul>
-<li>
-Download (5+ min) to a folder and them double click on the
-<strong>PKG file</strong>
-</li>
-<li>
-Follow the installation instructions.
-</li>
-<li>
-You don’t need to open anything after MacTeX is finished
-installing.
-</li>
-</ul>
-</div>
-<p><img src="images/MacTeX_download.PNG" width="600" /></p>
-</div>
-<div id="windows---use-miktex-no-longer-needed" class="section level3 hasAnchor" number="2.3.3">
-<h3><span class="header-section-number">2.3.3</span> Windows - use <code>MikTeX</code> (no longer needed!)<a href="install-software.html#windows---use-miktex-no-longer-needed" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="rmddownload">
-<p>
-Go to: <a
-href="http://miktex.org/download">http://miktex.org/download</a>
-</p>
-<ul>
-<li>
-Pick the latest version of the <strong>Net Installer</strong>, not
-the Basic!<br />
-</li>
-<li>
-You need the full version 64-bit is better, if you have a 64-bit
-machine<br />
-</li>
-<li>
-When your download is complete, run the downloaded installer.<br />
-</li>
-<li>
-Windows may ask you if you want to <em>“allow this app from an
-unknown publisher to make changes to your PC”</em>. If it does, make
-sure to click <strong>Yes!</strong><br />
-</li>
-<li>
-This is the slowest part…
-</li>
-</ul>
-</div>
-<p><img src="images/MikTeX_download.PNG" width="600" /></p>
+<div id="the-tinytex-package" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> The <code>tinytex</code> package<a href="install-software.html#the-tinytex-package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <code>tinyteX</code> is a relatively new project which strives to offer all the functionality of <span class="math inline">\(\LaTeX\)</span>, but remain lightweight and easier to maintain. I started using in exclusively in 2023 in place of a full installation of MacTeX or MikTex.</p>
+<p>Once you have “installed” the <code>tinytex</code> package <em>(see install packages)</em>, you will need to run the following code by copy and pasting it in the <strong>“Console”</strong> window of R Studio:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="install-software.html#cb1-1" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span></code></pre></div>
 
 </div>
 </div>

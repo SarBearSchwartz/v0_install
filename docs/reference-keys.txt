@@ -7,14 +7,12 @@ install-software
 installR
 the-r-studio-ide
 tex
-new-option-the-tinytex-package
-mac---use-mactex-no-longer-needed
-windows---use-miktex-no-longer-needed
+the-tinytex-package
 install-packages
 package-faq
 what-are-packages
 where-can-you-get-packages
-installing-packages
+installRpkgs
 useful-packages-on-cran
 the-tidy-universe-a-meta-package-from-r-studio
 groups-of-individual-packages-on-cran
@@ -32,8 +30,8 @@ reproducibility-and-reporting
 redcap-interface
 creating-your-own-packages
 userful-packages-on-github
+packages-writen-by-sarah-schwartz
 templates-for-writing-tutorials-practicals-or-examination-papers-with-r-markdown
-prepare-apa-journal-articles-with-r-markdown
 workspace-orientation
 default-window-arrangement
 cheatsheets

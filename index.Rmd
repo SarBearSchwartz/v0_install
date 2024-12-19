@@ -20,7 +20,7 @@ link-citations: yes
 
 # Welcome {-}
 
-[Encyclopedia's Home Website](https://cehs-research.github.io/eBooks/).
+[Encyclopedia's Home Website](http://www.sarahschwartzstats.com/encyclopedia_vol).
 
 
 

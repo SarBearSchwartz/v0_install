@@ -8,6 +8,8 @@ You will need to install both $R$ and $R Studio$, but $\LaTeX$ is optional.
 
 > The **“Comprehensive R Archive Network” (CRAN)** is a collection of sites which carry identical material, consisting of the $R$  distribution(s), the contributed extensions (packages), and documentation for $R$.  From $CRAN$, you can obtain the latest official FREE release of BASE $R$.
 
+Note: **R** version 4.4.2 *(Pile of Leaves)* was released on 2024-10-31 but the screen shots below may show an older version
+
 ```{block type='rmddownload', echo=TRUE} 
 Go to: [www.r-project.org](http://www.r-project.org)   
 
@@ -46,16 +48,16 @@ Each new release of $R$ is given a name that references a Peanuts strip or film.
 > **Posit** (formorly named 'RStudio') is a company that is also an active member of the $R$ community. They believe free and open source data analysis software is a foundation for innovative and important work in science, education, and industry. Their namesake software, $RStudio$, is an integrated development environment (IDE) for $R$. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management. They haven also recently developed an alternate called $Quatro$ which I'm keeping a close eye on.
 
 ```{block type='rmddownload', echo=TRUE}
-Go to: [www.posit.co](http://www.posit.co) 
+Go to: [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/) 
 
-* Click the blue "DOWNLOAD RSTUDIO" buttom in the upper-right hand corner
-* Select the FREE Open Source **Desktop** Edition of $R Studio$
+* Step 1: skip (we installed R above)
+* Step 2: click the blue "DOWNLOAD RSTUDIO DESKTOP" button to download the installation file
+* Execute the downloaded file (double click on windows)
 * The defaults are good...don't change them...just keep clicking *'Next'* 
 ```
 
-![](images/RStudio_download.PNG){width=800px}
+![](images/Screenshot_rstudio_install_button_2025.png){width=800px}
 
-![](images/RStudio_version.PNG){width=400px}
 
 
 
@@ -79,44 +81,17 @@ $Posit$ has an entire [online learning library](https://posit.co/resources/).  I
 
 
 
-### New Option: the `tinytex` package
+### The `tinytex` package
  
  
-`tinyteX` is still a relatively new project which strives to offer all the functionality of $\LaTeX$, but remain lightweight and easier to maintain.  
+The `tinyteX` is a relatively new project which strives to offer all the functionality of $\LaTeX$, but remain lightweight and easier to maintain. I started using in exclusively in 2023 in place of a full installation of MacTeX or MikTex. 
 
-```{block type='rmdlink', echo=TRUE}
-I am now using this in place of LaTeX!
+
+Once you have "installed" the `tinytex` package *(see install packages)*, you will need to run the following code by copy and pasting it in the **"Console"** window of R Studio:
+
+```{r, eval=FALSE}
+tinytex::install_tinytex()
 ```
 
 
-
-### Mac - use `MacTeX` (no longer needed!)
-
-
-```{block type='rmddownload', echo=TRUE}
-Go to:  [http://tug.org/mactex/](http://tug.org/mactex/)     
-
-* Download (5+ min) to a folder and them double click on the **PKG file**
-* Follow the installation instructions.
-* You don't need to open anything after MacTeX is finished installing. 
-```
-
-
-![](images/MacTeX_download.PNG){width=600px}
-
-
-
-### Windows - use `MikTeX` (no longer needed!)
-
-```{block type='rmddownload', echo=TRUE}
-Go to: [http://miktex.org/download](http://miktex.org/download)     
-
-* Pick the latest version of the **Net Installer**, not the Basic!     
-* You need the full version 64-bit is better, if you have a 64-bit machine    
-* When your download is complete, run the downloaded installer.     
-* Windows may ask you if you want to *“allow this app from an unknown publisher to make changes to your PC”*. If it does, make sure to click **Yes!**    
-* This is the slowest part...
-```
-
-![](images/MikTeX_download.PNG){width=600px}
 
