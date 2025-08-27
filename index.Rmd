@@ -1,12 +1,12 @@
 --- 
-title: "Encyclopedia of Quantitative Methods in R, vol. 0: Setting up Your Computer"
+title: "Encyclopedia of Quantitative Methods in R"
 author: "Sarah Schwartz, PhD"
 date: "Last updated: `r Sys.Date()`"
 documentclass: book
 description: "Getting started with R and R Studio: installing software and package management."
 knit: "bookdown::render_book"
-cover-image: "EQM_v0_cover.png"
-github-repo: cehs-research/eBook_install
+cover-image: "hexwall_books.png"
+github-repo: cehs-research/v0_install
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook:
@@ -18,20 +18,22 @@ link-citations: yes
 
 
 
-# Welcome {-}
-
-[Encyclopedia's Home Website](http://www.sarahschwartzstats.com/encyclopedia_vol).
+# Vol. 0: Setting up Your Software {-}
 
 
 
-![](images/common/EQM_v0_header.png)
+
+![](images/hexwall_books.png)
+
+
+## The Author {-}
 
 
 Website: [www.SarahSchwartzStats.com](http://www.sarahschwartzstats.com/)  
 
 eMail: Sarah.Schwartz@usu.edu
 
-![](images/common/ORS_Sarah_headshot.jpg){width=500px}
+![](images/USUAug820247058.jpg){width=500px}
 
 
 
@@ -45,6 +47,72 @@ eMail: Sarah.Schwartz@usu.edu
 
 
 
+```{r, echo=FALSE, include=FALSE, comment=FALSE, message=FALSE}
+library(tidyverse, quietly = TRUE)
+library(kableExtra)
+```
+
+
+
+## Blocked Notes {-}
+
+Thoughout all the eBooks in this encyclopedia, several small sections will be blocked out in the following ways:
+
+```{block type='rmdconstruct', echo=TRUE}
+These blocks denote an area **UNDER CONSTRUCTION**, so check back often.  This massive undertaking started during the summer of 2018 and is far from complete.  The outline of seven volumes is given above despite any one being complete.  Feedback is welcome via either author's email.
+```
+
+
+```{block type='rmdimportant', echo=TRUE}
+These blocks denote something **EXTREMELY IMPORTANT**.  
+
+Do NOT skip these notes as they will be used very sparingly.
+```
+
+
+```{block type='rmddownload', echo=TRUE}
+These blocks denote something to **DOWNLOAD**.  
+
+This may include software installations, example datasets, or notebook code files.
+```
+
+
+```{block type='rmdlightbulb', echo=TRUE}
+These blocks denote something **INTERESTING**.  
+
+These point out information we found of interest or added value.
+```
+
+
+
+```{block type='rmdlink', echo=TRUE}
+These blocks denote **LINKS** to other websites.  
+
+This may include instructional video clips, articles, or blog posts.  
+
+We are all about NOT re-creating the wheel.  
+
+If somebody else has described or illustrated a topic well, we celebrate it!
+```
+
+
+## Code and Output {-}
+
+This is how $R$ code is shown:
+
+```{r, eval=FALSE}
+1 + 1
+```
+
+This is what the output of the $R$ code above will look:
+
+```{r, echo=FALSE}
+# This is a Code Chunk
+1 + 1
+```
+
+
+
 ## FYI  {-}
 
 This entire encyclopedia is written in $R Markdown$, using $R Studio$ as the text editor and the `bookdown` package to turn a collection of markdown documents into a coherent whole. The book's source code is hosted on GitHub. If you notice typos or other issues, feel free to email either of the authors.
@@ -53,4 +121,3 @@ This work is licensed under the [Attribution-NonCommercial-NoDerivatives 4.0 Int
 
 
 
-![](images/common/Education_Logo_WHITE-02.png){width=300px}
